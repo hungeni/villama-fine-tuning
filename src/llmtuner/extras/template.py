@@ -288,6 +288,23 @@ register_template(
 )
 
 
+register_template(
+    name="llama2_vi",
+    prefix=[
+        "<<SYS>>\n{{system}}\n<</SYS>>\n\n"
+    ],
+    prompt=[
+        "[INST] {{query}} [/INST] "
+    ],
+    system=(
+        "You are a helpful, respectful and honest assistant. "
+        "Bạn là một trợ thủ đắc lực, tin cậy. "
+    ),
+    sep=[]
+)
+
+
+
 r"""
 Supports: https://github.com/ymcui/Chinese-LLaMA-Alpaca-2
           https://huggingface.co/ziqingyang/chinese-alpaca-2-7b
